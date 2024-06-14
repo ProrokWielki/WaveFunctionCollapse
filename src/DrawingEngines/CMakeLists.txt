@@ -1,2 +1,3 @@
 add_subdirectory(CLIDrawingEngine)
 add_subdirectory(FTXUIDrawingEngine)
+add_subdirectory(NCursesDrawingEngine)
