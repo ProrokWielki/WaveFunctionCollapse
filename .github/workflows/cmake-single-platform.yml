@@ -24,7 +24,10 @@ jobs:
 
     - uses: jwidauer/setup-conan@v1
 
-    - name: Conan Install
+    - name: Conan detect profile
+      run: conan profile detect
+      
+    - name: Conan install
       run:  conan install . --build=missing -of=build
     
     - name: Configure CMake
