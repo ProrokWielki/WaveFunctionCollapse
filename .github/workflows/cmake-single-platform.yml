@@ -40,6 +40,6 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: clang-tidy check
-      run: cd ${{github.workspace}}/build && run-clang-tidy -warnings-as-errors="*"  -checks="*,-abseil-*,-altera-*,-android-*,-fuchsia-*,-google-*,-llvm*,-modernize-use-trailing-return-type,-zircon-*,-readability-else-after-return,-readability-static-accessed-through-instance,-readability-avoid-const-params-in-decls,-cppcoreguidelines-non-private-member-variables-in-classes,-misc-non-private-member-variables-in-classes" -header-filter="${{github.workspace}}" 2>&1 | tee -a clang-tidy-result
+      run: cd ${{github.workspace}}/build && run-clang-tidy -warnings-as-errors  -checks="*,-abseil-*,-altera-*,-android-*,-fuchsia-*,-google-*,-llvm*,-modernize-use-trailing-return-type,-zircon-*,-readability-else-after-return,-readability-static-accessed-through-instance,-readability-avoid-const-params-in-decls,-cppcoreguidelines-non-private-member-variables-in-classes,-misc-non-private-member-variables-in-classes" -header-filter="${{github.workspace}}" 2>&1 | tee -a clang-tidy-result
 
 
