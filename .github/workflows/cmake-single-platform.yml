@@ -40,6 +40,6 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: clang-tidy check
-      run: cd ${{github.workspace}}/build && run-clang-tidy -checks="*"  --header-filter="${{github.workspace}}" 2>&1 | tee -a clang-tidy-result
+      run: cd ${{github.workspace}}/build && run-clang-tidy -checks="*"  -header-filter="${{github.workspace}}" 2>&1 | tee -a clang-tidy-result
 
 
