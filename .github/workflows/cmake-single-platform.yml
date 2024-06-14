@@ -40,6 +40,6 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: clang-tidy check
-      run: run-clang-tidy -extra-arg=-Wno-unknown-warning-option -checks='-*,bugprone-string-constructor'
+      run: cd ${{github.workspace}}/build && run-clang-tidy -extra-arg=-Wno-unknown-warning-option -checks='-*,bugprone-string-constructor'
 
 
