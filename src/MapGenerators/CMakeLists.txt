@@ -8,4 +8,5 @@ target_include_directories(MapGenerator
     ${CMAKE_CURRENT_SOURCE_DIR}
 	${LIB_PROJECT_NAME})
 
+add_subdirectory(WaveFunctionColapseMapGenerator)
 add_subdirectory(FixedMapGenerator)
